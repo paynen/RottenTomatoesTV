@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>RottenTomatoesTv</title>
+  
+  <!-- Style sheets code -->
+  <link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+  
+  <!-- TODO: Plugins -->
+
+</head>
+
+<body>
+  
+
+  <!-- Dummy anchor as focus for key events -->
+  <a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+
+  <h1>Hello</h1>
+  <div id="search">
+    <form>
+      <input type="text" id="searchInput" />
+    </form>
+  </div>
+
+  <div id="results">
+    <ul></ul>
+  </div>
+  
+  <!-- Common API -->
+  <!--  Taken from http://www.samsungdforum.com/SamsungDForum/ForumView/df3455b529adf7c4?forumID=8c1afcc0709c2097 -->
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/OpenSrc/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/Util/Include.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/Util/Language.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/Plugin/Define.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/IME/ime2.js"></script>
+  <script type="text/javascript" src="$MANAGER_WIDGET/Common/IME_XT9/ime.js"></script>
+  
+  <script type="text/javascript">
+    var RT = {};
+  </script>
+  <script type="text/javascript" src="app/javascript/bind.js"></script>
+  <script type="text/javascript" src="app/javascript/SearchView.js"></script>
+  <script type="text/javascript" src="app/javascript/Main.js"></script>
+</body>
+</html>
