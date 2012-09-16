@@ -17,14 +17,14 @@
   <!-- Dummy anchor as focus for key events -->
   <a href="" id="keyHandler" type="search"></a>
 
-  <h1>Hello</h1>
+  <h1>Rotten Tomatoes</h1>
   <div id="search">
     <form>
       <input type="text" id="searchInput" />
     </form>
   </div>
 
-  <div id="results">
+  <div class="results">
     <ul></ul>
   </div>
   
@@ -40,11 +40,18 @@
   <script type="text/javascript" src="$MANAGER_WIDGET/Common/IME/ime2.js"></script>
   <script type="text/javascript" src="$MANAGER_WIDGET/Common/IME_XT9/ime.js"></script>
   
-  <script type="text/javascript">
-    var RT = {};
-  </script>
+  <!--  Dependencies -->
+  <script type="text/javascript" src="node_modules/smokesignals/smokesignals.min.js"></script>
+  
+  <!-- App -->
   <script type="text/javascript" src="app/javascript/bind.js"></script>
+  <script type="text/javascript" src="app/javascript/namespace.js"></script>
+  <script type="text/javascript" src="app/javascript/GlobalEvents.js"></script>
+  <script type="text/javascript" src="app/javascript/events/SearchEvent.js"></script>
+  <script type="text/javascript" src="app/javascript/SearchModel.js"></script>
+  <script type="text/javascript" src="app/javascript/SearchController.js"></script>
   <script type="text/javascript" src="app/javascript/SearchView.js"></script>
+  <script type="text/javascript" src="app/javascript/SearchResultsView.js"></script>
   <script type="text/javascript" src="app/javascript/Main.js"></script>
 </body>
 </html>

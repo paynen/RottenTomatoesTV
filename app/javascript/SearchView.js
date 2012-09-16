@@ -42,6 +42,18 @@
     ime.setQWERTYPos(inputOffset.top + this._jInput.height(), inputOffset.left);
     ime.setEnterFunc(this._performSearch.bind(this));
 
+    /*
+     * 
+     * ime.setKeyFunc(tvKey.KEY_RETURN, function(keyCode) {
+     * widgetAPI.sendReturnEvent(); return false; });
+     * ime.setKeyFunc(tvKey.KEY_EXIT, function(keyCode) {
+     * widgetAPI.sendExitEvent(); return false; });
+     * 
+     * var callback = function(keyCode) { alert("Key pressed, code " + (new
+     * Date()) + Array.prototype.join.call(arguments, ", ")); return true; };
+     * ime.setAnyKeyFunc(callback);
+     * 
+     */
     this._initialiseEvents();
   };
 
@@ -76,7 +88,7 @@
    * @param {String} searchTerm The term to search for
    */
   SearchView.prototype._performSearch = function(searchTerm) {
-    alert("Searching for: " + searchTerm);
+    RT.GlobalEvents.emit(RT.events.SearchEvent, new RT.events.SearchEvent(searchTerm));
     $("#keyHandler").focus();
   };
 

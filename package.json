@@ -1,0 +1,17 @@
+{
+  "author": "Nick Payne",
+  "name": "RottenTomatoesTV",
+  "description": "A Rotten Tomatoes app for Samsungs Smart TV",
+  "version": "0.0.0",
+  "scripts": {
+  },
+  "dependencies": {
+    "smokesignals": "0.0.7"
+  },
+  "devDependencies": {
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
