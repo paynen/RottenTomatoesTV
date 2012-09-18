@@ -22,13 +22,21 @@
    * @type {jQuery}
    */
   SearchView.prototype._jInput = null;
+  
+  /**
+   * The Input Method Editor for this view
+   * 
+   * @see http://www.samsungdforum.com/Guide/View/Developer_Documentation/Samsung_SmartTV_Developer_Documentation_3.5/JavaScript/Input_Control/Using_IME_(Input_Method_Editor)
+   * @type {IMEShell}
+   */
+  SearchView.prototype._ime = null;
 
   /**
    * Initialise the dom for this view
    */
   SearchView.prototype._initialiseDom = function() {
     this._jInput = $("#" + this._INPUT_ID);
-    new IMEShell(this._INPUT_ID, this._imeShellReady.bind(this), "en");
+    this._ime = new IMEShell(this._INPUT_ID, this._imeShellReady.bind(this), "en");
   };
 
   /**
@@ -42,18 +50,6 @@
     ime.setQWERTYPos(inputOffset.top + this._jInput.height(), inputOffset.left);
     ime.setEnterFunc(this._performSearch.bind(this));
 
-    /*
-     * 
-     * ime.setKeyFunc(tvKey.KEY_RETURN, function(keyCode) {
-     * widgetAPI.sendReturnEvent(); return false; });
-     * ime.setKeyFunc(tvKey.KEY_EXIT, function(keyCode) {
-     * widgetAPI.sendExitEvent(); return false; });
-     * 
-     * var callback = function(keyCode) { alert("Key pressed, code " + (new
-     * Date()) + Array.prototype.join.call(arguments, ", ")); return true; };
-     * ime.setAnyKeyFunc(callback);
-     * 
-     */
     this._initialiseEvents();
   };
 
@@ -72,12 +68,8 @@
     var tvKey = new Common.API.TVKeyValue();
 
     switch (key) {
-      case tvKey.KEY_UP:
-      case tvKey.KEY_DOWN:
-      case tvKey.KEY_LEFT:
-      case tvKey.KEY_RIGHT:
       case tvKey.KEY_RED:
-      case tvKey.KEY_ENTER:
+        this._ime.setString("");
         this._jInput.focus();
     }
   };

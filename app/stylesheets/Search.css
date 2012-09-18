@@ -1,0 +1,15 @@
+#search input {
+    font-size: 24px;
+    border: 4px solid #5b78bf;
+    margin: 10px 0 14px 6px;
+}
+
+#search .redButton {
+    font-weight: bold;
+    color: #f00;
+}
+
+#search label {
+    font-size: 13px;
+    padding-left: 10px;
+}

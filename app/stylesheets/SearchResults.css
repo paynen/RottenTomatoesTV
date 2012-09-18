@@ -1,0 +1,26 @@
+.searchResults ul {
+    width: 60%;
+    margin-top: 20px;
+    margin-right: 16px;
+}
+
+.searchResults li {
+    display: block;
+    position: relative;
+    min-height: 30px;
+}
+
+.searchResults a {
+    display: block;
+    margin-right: 40px;
+}
+
+.searchResults .rating {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #22b41a;
+}

@@ -6,6 +6,8 @@
   
   <!-- Style sheets code -->
   <link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+  <link rel="stylesheet" href="app/stylesheets/Search.css" type="text/css">
+  <link rel="stylesheet" href="app/stylesheets/SearchResults.css" type="text/css">
   
   <!-- TODO: Plugins -->
 
@@ -20,11 +22,11 @@
   <h1>Rotten Tomatoes</h1>
   <div id="search">
     <form>
-      <input type="text" id="searchInput" />
+      <input type="text" id="searchInput" /><label for="searchInput">Press <span class="redButton">red</span> to search</label>
     </form>
   </div>
 
-  <div class="results">
+  <div class="searchResults">
     <ul></ul>
   </div>
   
